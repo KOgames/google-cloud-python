@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview: module code &mdash; google-cloud ab1ce15 documentation</title>
+  <title>Overview: module code &mdash; google-cloud c090fb5 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="google-cloud ab1ce15 documentation" href="../index.html"/> 
+    <link rel="top" title="google-cloud c090fb5 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -44,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -204,11 +205,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../vision-batch.html">Vision Batch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-client.html">Vision Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-color.html">Vision Image Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vision-crop-hint.html">Vision Crop Hint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-entity.html">Vision Entity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-feature.html">Vision Feature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-face.html">Vision Face</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-image.html">Vision Image</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vision-safe-search.html">Vision Safe Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vision-text.html">Vision Full Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vision-web.html">Vision Web Annotations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Natural Language</span></p>
 <ul>
@@ -275,8 +279,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">google-cloud</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">google-cloud</a>
+        
       </nav>
 
 
@@ -289,17 +295,34 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Overview: module code</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview: module code</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -338,9 +361,11 @@
 <li><a href="google/cloud/error_reporting/util.html">google.cloud.error_reporting.util</a></li>
 <li><a href="google/cloud/exceptions.html">google.cloud.exceptions</a></li>
 <li><a href="google/cloud/iterator.html">google.cloud.iterator</a></li>
+<li><a href="google/cloud/language/api_responses.html">google.cloud.language.api_responses</a></li>
 <li><a href="google/cloud/language/client.html">google.cloud.language.client</a></li>
 <li><a href="google/cloud/language/document.html">google.cloud.language.document</a></li>
 <li><a href="google/cloud/language/entity.html">google.cloud.language.entity</a></li>
+<li><a href="google/cloud/language/sentence.html">google.cloud.language.sentence</a></li>
 <li><a href="google/cloud/language/sentiment.html">google.cloud.language.sentiment</a></li>
 <li><a href="google/cloud/language/syntax.html">google.cloud.language.syntax</a></li>
 <li><a href="google/cloud/logging/client.html">google.cloud.logging.client</a></li>
@@ -399,6 +424,7 @@
 <li><a href="google/cloud/vision/batch.html">google.cloud.vision.batch</a></li>
 <li><a href="google/cloud/vision/client.html">google.cloud.vision.client</a></li>
 <li><a href="google/cloud/vision/color.html">google.cloud.vision.color</a></li>
+<li><a href="google/cloud/vision/crop_hint.html">google.cloud.vision.crop_hint</a></li>
 <li><a href="google/cloud/vision/entity.html">google.cloud.vision.entity</a></li>
 <li><a href="google/cloud/vision/face.html">google.cloud.vision.face</a></li>
 <li><a href="google/cloud/vision/feature.html">google.cloud.vision.feature</a></li>
@@ -406,9 +432,14 @@
 <li><a href="google/cloud/vision/image.html">google.cloud.vision.image</a></li>
 <li><a href="google/cloud/vision/likelihood.html">google.cloud.vision.likelihood</a></li>
 <li><a href="google/cloud/vision/safe_search.html">google.cloud.vision.safe_search</a></li>
+<li><a href="google/cloud/vision/text.html">google.cloud.vision.text</a></li>
+<li><a href="google/cloud/vision/web.html">google.cloud.vision.web</a></li>
 <li><a href="grpc/_channel.html">grpc._channel</a></li>
 </ul>
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -440,10 +471,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'ab1ce15',
+            VERSION:'c090fb5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
